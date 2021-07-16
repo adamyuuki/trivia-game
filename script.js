@@ -20,7 +20,7 @@ answers.forEach((ans)=>{
         }
     })
 
-    ans.addEventListener('touchstart', (e)=>{
+    ans.addEventListener('touchend', (e)=>{
         let selectedAns = ans.innerHTML
         if(questions[index].correct_answer === selectedAns){
             rightChoice(ans.id)
@@ -67,7 +67,7 @@ nextBtn.addEventListener('click', (e)=>{
 
 })
 
-nextBtn.addEventListener('touchstart', (e)=>{
+nextBtn.addEventListener('touchend', (e)=>{
     console.log(index);
 
     if (index == 9) {
