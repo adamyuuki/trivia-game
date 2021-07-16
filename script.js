@@ -49,7 +49,25 @@ function wrongChoice(id) {
 
 const endWindow = document.getElementById('endWindow')
 
-nextBtn.addEventListener('click touchstart', (e)=>{
+nextBtn.addEventListener('click', (e)=>{
+    console.log(index);
+
+    if (index == 9) {
+        // end
+        endWindow.innerHTML = "You got " + score + " answers Right"
+        endWindow.classList.remove('invisible')
+
+    } else{
+        index = index+1
+        nextBtn.classList.add('invisible')
+        clearStyle()
+        loadQuestion()
+    }
+
+
+})
+
+nextBtn.addEventListener('touchstart', (e)=>{
     console.log(index);
 
     if (index == 9) {
