@@ -74,10 +74,10 @@ html {
 	width: 20%;
 	height: 5rem;
 	position: absolute;
-	top: 80%;
+	top: 90%;
 	border-radius: 20px;
 	cursor: pointer;
-	font-size: 30px;
+	font-size: 3rem;
 	font-weight: bold;
 }
 

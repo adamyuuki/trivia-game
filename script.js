@@ -19,6 +19,16 @@ answers.forEach((ans)=>{
             console.log('wrong');
         }
     })
+
+    ans.addEventListener('touchstart', (e)=>{
+        let selectedAns = ans.innerHTML
+        if(questions[index].correct_answer === selectedAns){
+            rightChoice(ans.id)
+        } else{
+            wrongChoice(ans.id)
+            console.log('wrong');
+        }
+    })
 })
 
 loadData()
@@ -39,7 +49,7 @@ function wrongChoice(id) {
 
 const endWindow = document.getElementById('endWindow')
 
-nextBtn.addEventListener('click', (e)=>{
+nextBtn.addEventListener('click touchstart', (e)=>{
     console.log(index);
 
     if (index == 9) {
