@@ -17,21 +17,26 @@ answers.forEach((ans)=>{
         } else{
             wrongChoice(ans.id)
             console.log('wrong');
+            displayRightChoice()
         }
     })
 
-    ans.addEventListener('touchend', (e)=>{
-        let selectedAns = ans.innerHTML
-        if(questions[index].correct_answer === selectedAns){
-            rightChoice(ans.id)
-        } else{
-            wrongChoice(ans.id)
-            console.log('wrong');
-        }
+    ans.addEventListener('touchstart', (e)=>{
+        e.preventDefault()
+        ans.click()
     })
 })
 
 loadData()
+
+function displayRightChoice() {
+    answers.forEach((ans)=>{
+        let currentAns = ans.innerHTML
+        if(currentAns === questions[index].correct_answer){
+            rightChoice(ans.id)
+        }
+    })
+}
 
 
 function rightChoice(id) {

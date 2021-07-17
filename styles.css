@@ -110,3 +110,20 @@ html {
 .wrong-choice {
 	background-color: red;
 }
+
+@media (max-width: 600px) {
+	.nextBtn {
+		width: 20%;
+		height: 3rem;
+		position: absolute;
+		top: 90%;
+		border-radius: 20px;
+		cursor: pointer;
+		font-size: 1rem;
+		font-weight: bold;
+	}
+
+	.endWindow {
+		font-size: 30px;
+	}
+}
